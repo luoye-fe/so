@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SO FREEDOM</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link type="image/x-icon" rel="shortcut icon" href="https://luoyefe.com/favicon.ico">
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?02f4f966f7c6bd27cb94b352e9fd8d38";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <style type="text/css">
+    html,
+    body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        font-family: arial, sans-serif;
+    }
+
+    @font-face {
+        font-family: 'title';
+        src: url('http://7xqahl.com1.z0.glb.clouddn.com/edosz.ttf');
+    }
+
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #f2f2f2;
+        background-position: 50% 50%;
+        z-index: -1;
+    }
+
+    .main {
+        position: absolute;
+        width: 100%;
+        top: 30%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .title {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 55px;
+        line-height: 55px;
+        font-family: 'title';
+        letter-spacing: 8px;
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .search {
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background: #fff;
+        color: #666;
+        height: 44px;
+        border: 1px solid #f2f2f2;
+        border-radius: 5px;
+        padding: 6px 10px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 500px;
+    }
+
+    @media (max-width: 414px) {
+        .title {
+            font-size: 42px;
+            line-height: 42px;
+        }
+        .search {
+            width: 92%;
+        }
+        .qrcode::after {
+            display: block!imporant;
+        }
+    }
+
+    .input {
+        margin: 0;
+        padding: 0;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        border: none;
+        outline: none;
+    }
+
+    .input:focus {
+        outline: none;
+    }
+
+    .search>img {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .search>img:focues {
+        outline: none;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        line-height: 40px;
+        font-size: 14px;
+        padding: 0 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        background-color: #f2f2f2;
+        border-top: 1px solid #e4e4e4;
+        font-family: Menlo, arial, sans-serif;
+    }
+
+    .footer>div {
+        color: #666;
+    }
+
+    .footer>ul {
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .footer>ul li {
+        list-style: none;
+        display: block;
+        margin-right: 20px;
+    }
+
+    .footer>ul li a {
+        text-decoration: none;
+        color: #666;
+    }
+
+    .qrcode {
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+        background: #fff;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 999;
+        bottom: 100px;
+        opacity: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        -webkit-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+
+    .qrcode img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .qrcode::after {
+        content: '';
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 16px;
+        height: 16px;
+        background-image: url(https://s10.mogucdn.com/mlcdn/c45406/180115_3ghijjalcjb5b3ciikj99b4gd25k6_64x64.png);
+        background-size: 16px 16px;
+    }
+
+    .qrcode.active {
+        /*bottom: 100px;*/
+        /*display: block;*/
+        opacity: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="main">
+        <p class="title">SO FREEDOM</p>
+        <div class="search">
+            <input name="search" class="input">
+            <img src="https://s3.mogucdn.com/mlcdn/c45406/180115_027b415g3fhhg9a7hi9ab303b7i8e_64x64.png">
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>
+                <a href="https://luoyefe.com">LuoYe</a>
+            </li>
+            <li>
+                <a href="https://www.zhihu.com/people/luo-ye-42-22">ZhiHu</a>
+            </li>
+            <li>
+                <a href="https://github.com/luoye-fe">Github</a>
+            </li>
+            <li>
+                <a class="feedback" href="javascript:void(0)">Feedback</a>
+            </li>
+        </ul>
+        <div>© 2015 -
+            <script type="text/javascript">
+            (function() { document.write((new Date()).getFullYear()) })()
+            </script> Luoye.</div>
+    </div>
+    <div class="qrcode">
+        <img src="https://s10.mogucdn.com/mlcdn/c45406/180115_3d8a0lchdhdig2i67i73bkf44jlk6_650x656.png">
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        var w = window.screen.width;
+        var h = window.screen.height;
+        $('.bg').css({ 'background-image': `url(/bg?w=${w}&h=${h})` })
+
+        var inputEle = $('.input');
+        var searchEle = $('.search>img');
+        searchEle.on('click', search);
+        inputEle.on('keypress', function(event) {
+            if (event.keyCode == '13') return search();
+        })
+
+        function search() {
+            var inputContent = encodeURIComponent(inputEle.val());
+            if (!inputContent) return;
+            location.href = '/search?newwindow=1&q=' + inputContent;
+        }
+
+        var feedbackEle = $('.feedback');
+        var qrcodeEle = $('.qrcode');
+        feedbackEle.on('click', function() {
+            qrcodeEle.toggleClass('active');
+        });
+    })();
+    </script>
+</body>
+
+</html>
