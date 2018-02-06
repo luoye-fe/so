@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "egg": "^2.2.1",
+    "egg-logger": "^1.6.1",
     "egg-scripts": "^2.5.0",
     "request": "^2.83.0"
   },
